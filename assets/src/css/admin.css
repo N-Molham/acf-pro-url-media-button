@@ -1,5 +1,14 @@
-.plugin-class {
-	display: inline-block;
-	margin-bottom: 10px;
-	outline: 1px solid red;
+
+.acf-media-library-button-wrapper {
+	text-align: right;
+}
+
+.rtl .acf-media-library-button-wrapper {
+	text-align: left;
+}
+
+.acf-media-library-button i {
+	vertical-align: middle;
+	font-size: 18px;
+	color: #82878c;
 }

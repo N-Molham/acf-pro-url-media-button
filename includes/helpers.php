@@ -17,6 +17,28 @@ final class Helpers
 	static $text_domain = ACF_PRO_MB_DOMAIN;
 
 	/**
+	 * Enqueue path
+	 *
+	 * @var string
+	 */
+	private static $enqueue_path;
+
+	/**
+	 * Get Assets enqueue base path
+	 *
+	 * @return string
+	 */
+	public static function enqueue_path()
+	{
+		if ( null === self::$enqueue_path )
+		{
+			self::$enqueue_path = sprintf( '%s/assets/%s/', untrailingslashit( ACF_PRO_MB_URI ), self::is_script_debugging() ? 'src' : 'dist' );
+		}
+
+		return self::$enqueue_path;
+	}
+
+	/**
 	 * Check if the given URL is valid
 	 *
 	 * @param string $url
