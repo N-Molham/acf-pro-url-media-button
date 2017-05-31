@@ -4,14 +4,14 @@
  * @type {Object}
  */
 var plugin_args = {
-	path: './', // plugin directory path
-	domainPath: '/languages', // language files location ( relative to "path" )
+	path       : './', // plugin directory path
+	domain_path: '/languages', // language files location ( relative to "path" )
 	potFilename: 'template.pot', // generated pot file name
-	exclude: [ // excluded files and directory from parsing
+	exclude    : [ // excluded files and directory from parsing
 		'vendor/' // composer libs vendor dir
 	],
-	mainFile: 'acf-pro-url-media-button.php', // plugin main file ( with plugin description comment doc )
-	watchFiles: {
+	mainFile   : 'acf-pro-url-media-button.php', // plugin main file ( with plugin description comment doc )
+	watchFiles : {
 		assets: [ 'assets/src/css/**/*.css', 'assets/src/js/**/*.js' ],
 		potfile: [ './**/*.php' ]
 	}
@@ -49,7 +49,7 @@ module.exports = function ( grunt ) {
 			target: {
 				options: {
 					cwd: plugin_args.path,
-					domainPath: plugin_args.domainPath,
+					domainPath: plugin_args.domain_path,
 					exclude: plugin_args.exclude,
 					mainFile: plugin_args.mainFile,
 					potFilename: plugin_args.potFilename,
